@@ -1,0 +1,38 @@
+<!-- Collection-aware post navigation -->
+{% assign collection_name = page.collection %}
+{% assign sorted = site[collection_name] | sort: 'date' %}
+{% assign total = sorted | size %}
+{% assign prev_post = nil %}
+{% assign next_post = nil %}
+
+{% for item in sorted %}
+  {% if item.url == page.url %}
+    {% if forloop.index0 > 0 %}
+      {% assign prev_idx = forloop.index0 | minus: 1 %}
+      {% assign prev_post = sorted[prev_idx] %}
+    {% endif %}
+    {% assign next_idx = forloop.index0 | plus: 1 %}
+    {% if next_idx < total %}
+      {% assign next_post = sorted[next_idx] %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+
+<nav class="post-navigation d-flex justify-content-between mt-4 mb-2" aria-label="Post Navigation">
+  <div class="nav-prev" style="max-width: 48%;">
+    {% if prev_post %}
+      <a href="{{ prev_post.url | relative_url }}" class="text-decoration-none text-muted small">
+        <span>&#8592; older</span><br>
+        <span class="fw-semibold" style="color: var(--link-color);">{{ prev_post.title }}</span>
+      </a>
+    {% endif %}
+  </div>
+  <div class="nav-next text-end" style="max-width: 48%;">
+    {% if next_post %}
+      <a href="{{ next_post.url | relative_url }}" class="text-decoration-none text-muted small">
+        <span>newer &#8594;</span><br>
+        <span class="fw-semibold" style="color: var(--link-color);">{{ next_post.title }}</span>
+      </a>
+    {% endif %}
+  </div>
+</nav>

@@ -1,0 +1,10 @@
+{
+  "name": "sl10 Scratchpad",
+  "short_name": "sl10",
+  "icons": [
+    { "src": "/assets/img/favicons/favicon-96x96.png", "sizes": "96x96", "type": "image/png" }
+  ],
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "display": "standalone"
+}
