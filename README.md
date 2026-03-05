@@ -1,4 +1,4 @@
-# sl10-sec.github.io
+# sl10's Security Scratchpad
 
 Personal scratchpad for offensive security research, notes, CTF writeups, and interesting reads.
 
