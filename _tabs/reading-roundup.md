@@ -1,7 +1,7 @@
 ---
 layout: collection-list
-title: Daily Read
+title: Reading Roundup
 icon: fas fa-newspaper
 order: 1
-collection_source: daily
+collection_source: reading_roundup
 ---

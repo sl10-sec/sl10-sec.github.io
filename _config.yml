@@ -168,10 +168,10 @@ collections:
   tabs:
     output: true
     sort_by: order
-  daily:
+  reading_roundup:
     output: true
     sort_by: date
-    permalink: /daily/:title/
+    permalink: /reading-roundup/:title/
   musings:
     output: true
     sort_by: date
@@ -194,7 +194,7 @@ defaults:
       permalink: /:title/
   - scope:
       path: ""
-      type: daily
+      type: reading_roundup
     values:
       layout: post
       toc: false

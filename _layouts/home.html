@@ -4,7 +4,7 @@ layout: default
 
 {% include lang.html %}
 
-{% assign all_items = site.daily | concat: site.musings | concat: site.research_notes | concat: site.writeups %}
+{% assign all_items = site.reading_roundup | concat: site.musings | concat: site.research_notes | concat: site.writeups %}
 {% assign all_items = all_items | where_exp: 'item', 'item.hidden != true' %}
 {% assign posts = all_items | sort: 'date' | reverse | limit: 10 %}
 
@@ -70,8 +70,8 @@ layout: default
 
                 <!-- section icon -->
                 {% assign col = post.collection %}
-                {% if col == 'daily' %}
-                  <i class="fas fa-newspaper fa-fw ms-2 me-1"></i><span>Daily Read</span>
+                {% if col == 'reading_roundup' %}
+                  <i class="fas fa-newspaper fa-fw ms-2 me-1"></i><span>Reading Roundup</span>
                 {% elsif col == 'musings' %}
                   <i class="fas fa-pen-nib fa-fw ms-2 me-1"></i><span>Musings</span>
                 {% elsif col == 'research_notes' %}
