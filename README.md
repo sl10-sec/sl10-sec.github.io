@@ -8,7 +8,7 @@ Built with [Jekyll](https://jekyllrb.com/) and the [Chirpy](https://github.com/c
 
 | Folder | Section |
 |---|---|
-| `_daily/` | Daily Read |
+| `_reading_roundup/` | Reading Roundup |
 | `_musings/` | Musings |
 | `_research_notes/` | Research Notes |
 | `_writeups/` | Write-ups |
