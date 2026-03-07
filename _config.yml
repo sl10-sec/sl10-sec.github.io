@@ -198,6 +198,7 @@ defaults:
     values:
       layout: post
       toc: false
+      hide_post_tail: true
   - scope:
       path: ""
       type: musings
